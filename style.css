@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+}
+button
+{
+    border: .1rem solid #ff8838;
+    font-size: 1.1rem;
+    padding: .8rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .5s ease;
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+button:hover
+{
+    background-color: #fff;
+    color: black;
+}
+body
+{
+    overflow-x: hidden;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0), #000 30%), url('Images/pxfuel.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: black;
+
+    /*To create spacing in text*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;;
+}
+.navbar a
+{
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 40px;
+}
+.navbar a:hover
+{
+    color: rgb(116, 130, 255);
+}
+.navbar a::before
+{
+    content: '';
+    position: absolute;
+    top: 100%; /*100% means the underline will be ndek bawah*/
+    left: 0;
+    width: 0;
+    height: 2px;
+    color: rgb(116, 130, 255);
+}
+.navbar a:hover::before
+{
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+    width: 100%;
+}
+.UpperLeftCornerText
+{
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+.home
+{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.home img
+{
+    z-index: 1;
+    display: block;
+    position: relative;
+    width: 30%;
+    height: 100%;
+    padding-top: 8%;
+    margin-left: auto;
+    margin-right: auto;
+
+    filter: grayscale(1);
+    transition: .3s linear;
+}
+.home img:hover
+{
+    filter: grayscale(0);
+}
+.home .running-text
+{
+    overflow: hidden;
+
+    display: flex;
+    justify-content: flex-start;
+    white-space: nowrap;
+
+    top: 30%;
+    position: absolute;
+}
+.home .running-text h1
+{
+    display: block;
+    padding: 0 6rem;
+    z-index: 0;
+
+    color: white;
+    
+    font-size: 14vw;
+    font-weight: 350;
+    letter-spacing: 1px;
+
+    animation: move-rtl 40000ms linear infinite;
+}
+.home .running-text h1 i
+{
+    font-size: 2rem;
+    line-height: 0px;
+    vertical-align: middle;
+    margin-right: 10rem;
+    color: rgb(116, 130, 255);
+}
+.about
+{
+    width: 100%;
+    height: 100%;
+    padding: 8rem 8rem 0rem 8rem;
+    background-size: cover;
+    background-color: #000000;
+}
+.about span
+{
+    color: rgb(116, 130, 255);
+}
+.about h1
+{
+    font-weight: 500;
+    font-size: 3vw;
+    color: #fff;
+    text-align: center;
+}
+.skills
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 6.25rem;
+}
+.card
+{
+    width: 40rem;
+    background-color: #0f0f0f;
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 1rem;
+}
+.card img
+{
+    width: 100%;
+    height: 70%;
+    transition: .3s;
+    transition-timing-function: ease-out;
+}
+.card-content
+{
+    padding:1rem;
+}
+.card-content p
+{
+    color: #bbb;
+}
+.card-content a
+{
+    color: rgb(116, 130, 255);
+}
+.card-content h3
+{
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #bbb;
+}
+
+.reveal 
+{
+    opacity: 0;
+    transform: translate3d(0, 100px, 0);
+    transition: opacity 0.8s, transform 0.8s;
+}
+.reveal_visible 
+{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+@keyframes move-rtl
+{
+    0%
+    {
+        transform: translateX(0);
+    }
+    100%
+    {
+        transform: translateX(-100%);
+    }
+}
+/*footer*/
+@media (max-width:700px) 
+{
+    .footernav ul
+    {
+        flex-direction: column;
+    }    
+    .footernav ul li
+    {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
+.footercontainer
+{
+    width: 100%;
+    padding: 70px 30px 20px;
+    margin-top: -15rem;
+    text-align: center;
+}
+.socialicons
+{
+    display: flex;
+    justify-content: center;
+}
+.socialicons a
+{
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    background-color: #111;
+    border-radius: 50%;
+}
+.socialicons a i
+{
+    font-size: 2em;
+    color: white;
+    opacity: 0.9;
+}
+.socialicons a:hover
+{
+    background-color: white;
+    transition: 0.5s;
+}
+.socialicons a:hover i
+{
+    color: rgb(116, 130, 255);
+    transition: 0.5s;
+}
+.footernav ul 
+{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.footernav a
+{
+    text-decoration: none;
+    color: #fff;
+}
+.footernav
+{
+    margin: 30px 0;
+}
+.footernav ul li a
+{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footernav ul li a:hover
+{
+    opacity: 1;
+    color: rgb(116, 130, 255);
+}
+.footerbottom
+{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+.footerbottom p
+{
+    color: white;
+}
+
+.projects
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 100px;
+    color: #fff;
+}
+.containerprojects
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main-title
+{
+    font-size: 4em;
+}
+.contentprojects
+{
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentprojects .image
+{
+    position: relative;
+    width: 800px;
+    height: 800px;
+    overflow: hidden;
+}
+.contentprojects .image
+{
+    left: 0em;
+}
+.contentprojects .image img
+{
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.section-title
+{
+    font-size: 3em;
+    margin-bottom: 80px;
+}
+.info-title
+{
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+.info
+{
+    width: 700px;
+    margin-left: 0px;
+    margin-bottom: 400px;
+}

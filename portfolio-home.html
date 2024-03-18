@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bryan Fernando Dinata 12B-Portfolio</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/scrollreveal"></script>
+	</head>
+	<body>
+       <header class="header">
+        <a href="#" class="UpperLeftCornerText">BRYAN</a>
+
+        <nav class="navbar">
+            <a href="#footercontainer">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#career">CAREER</a>
+            <a href="#footer">CONTACT</a>
+        </nav>
+       </header>
+       <div class="home" id="home">
+            <img src="Images/person.png" alt="">
+            <div class="running-text">
+                <h1><i class="fa-solid fa-star"></i></i>bryan</h1>
+                <h1><i class="fa-solid fa-star"></i></i>bryan</h1>
+                <h1><i class="fa-solid fa-star"></i></i>bryan</h1>
+                <h1><i class="fa-solid fa-star"></i></i>bryan</h1>
+            </div>
+       </div>
+       <div class="about" id="about">
+            <h1>I am a IPH Schools East student</h1>
+            <br>
+            <h1>And a <span>Game Developer</span> for</h1>
+            <br>
+            <h1>with 2.5 years of experience</h1>
+       </div>
+        <div class="skills" id="projects">
+            <div class="card">
+                <img src="Images/3d-modeling.png" alt="">
+                <div class="card-content">   
+                    <h3>Blender Donut Project</h3>
+                    <p>Making donut to get marks</p>
+                    <a href="" class="btn">Read More</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Images/3d-modeling-2.png" alt="">
+                <div class="card-content">   
+                    <h3>Blender Robot Project</h3>
+                    <p>Making robot in order to get good grades</p>
+                    <a href="" class="btn">Read More</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Images/gameexample_3.png" alt="">
+                <div class="card-content">   
+                    <h3>RPG game</h3>
+                    <p>Making 2D RPG game using unity engine</p>
+                    <a href="" class="btn">Read More</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Images/gameexample_2.png" alt="">
+                <div class="card-content">   
+                    <h3>2D Platformer Game</h3>
+                    <p>Making 2D platformer game using unity engine</p>
+                    <a href="" class="btn">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="projects">
+            <div class="containerprojects">
+                <h3 class="section-title">EXPERIENCE</h3>
+                <div class="contentprojects">
+                    <div class="image">
+                        <img src="Images/teaminfiniteminds.jpg" alt="" id="career">
+                    </div>
+                    <div class="info">
+                        <h4 class="info-title">Work Experience</h4>
+                        <p>
+                            <span>I used to work for a company called Team Infinite Minds. During the</span>
+                            <span>the first year I made minecraft add-ons. As for the last 2.5 years I worked</span>
+                            <span>as a game developer. I have experience on using Unity and Unreal</span>
+                            <span>Engine as my main game engine.</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="footercontainer" id="footer">
+                <button>CONTACT ME</button>
+                <div class="socialicons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/bryan_f.d/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://discord.gg/V7uZZjj3kA" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                </div>
+                <div class="footernav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#career">Career</a></li>
+                    </ul>
+                </div>  
+            </div>
+            <div class="footerbottom">
+                <p>
+                    <span>By</span>
+                    <span>Bryan</span>
+                    <span>Fernando</span>
+                    <span>Dinata</span>
+                </p>
+            </div>
+    </body>
+    <script>
+        ScrollReveal(
+        {
+            reset:true, 
+            distance: '60px',
+            duration:2000,
+            delay:1600
+        });
+        ScrollReveal().reveal('.about h1', {delay:10, origin:'left', interval:150});
+        ScrollReveal().reveal('.projects .containerprojects h3', {delay:10, origin:'left'});
+        ScrollReveal().reveal('.skills .card .card-content h3, .skills. card. card-content p', {delay:25, origin:'left'});
+        ScrollReveal().reveal('.projects .containerprojects .contentprojects .info h4', {delay:75, origin:'left'});
+        ScrollReveal().reveal('.projects .containerprojects .contentprojects .info p span', {delay:55, origin:'left', interval:150});
+
+
+        ScrollReveal().reveal('.skills .card', {delay:300, origin:'bottom', interval:100});
+        ScrollReveal().reveal('.footercontainer button', {delay:25});
+        ScrollReveal().reveal('.footercontainer .footernav li, .footercontainer .socialicons a, .footerbottom p span', {delay:25, origin:'bottom', interval:100});
+        ScrollReveal().reveal('.sec-02 .image, .sec-03 .image', {delay:25, origin:'top'});
+        ScrollReveal().reveal('.projects .containerprojects .contentprojects .image img', {delay:300, origin:'bottom'});
+    </script>
+</html>
